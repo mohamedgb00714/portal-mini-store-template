@@ -2,6 +2,7 @@ import { withPayload } from '@payloadcms/next/withPayload'
 import { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  turbopack: {}, // Enable Turbopack for Next.js 16
   webpack: (config) => {
     if (process.env.NODE_ENV === 'development') {
       config.module.rules.push({
